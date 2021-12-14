@@ -11,6 +11,12 @@ function App() {
     setPeople([]);
   }
 
+   //Handler for Reloading page
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
+
   return (
     <main>
       <section className='container'>
@@ -20,6 +26,7 @@ function App() {
       <h3>{people.length} birthdays today</h3>
       <List people={people}/> 
       <button className='btn' onClick={deleteAll}> Clear All</button>
+      <button onClick={refreshPage}>Click to reload!</button>
       </section>
   
     </main>
